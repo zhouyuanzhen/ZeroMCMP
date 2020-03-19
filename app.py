@@ -18,7 +18,7 @@ def hello_world():
     return 'Welcome to ZeroMCMP!\n'
 
 
-@app.route('/aws/get_regions')
+@app.route('/api/aws/allregions.json')
 def aws_get_regions():
 
     return Response(json.dumps(AWSCloud.get_acs_regions(awsec2)), mimetype='applicaiton/json')

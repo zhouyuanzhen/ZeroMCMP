@@ -20,11 +20,14 @@ class AWSCloud:
     def get_acs_regions(self):
         """
         """
-        # regions = []
+        regions = []
         # for region in self.ec2cli.describe_regions()['Regions']:
         #     print(region)
         #     regions.append(region)
         #
         # print(regions)
         # return regions
-        return self.ec2cli.describe_regions()
+        # regions.append(self.ec2cli.describe_regions()['Regions'])
+        # return self.ec2cli.describe_regions()
+
+        return self.ec2cli.describe_regions()['Regions']
